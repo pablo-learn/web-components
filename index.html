@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+
+<body>
+  <!-- <style>
+    body {
+      font-family: monospace;
+    }
+
+    h1 {
+      color: pink;
+    }
+  </style>
+
+  <template>
+    <style>
+      h1 {
+        color: red;
+      }
+    </style>
+    <h1>Hello world!</h1>
+  </template>
+
+  <h1>Hello world</h1> -->
+
+  <custom-component></custom-component>
+
+  <script>
+    // Create a class for the element
+    class WordCount extends HTMLElement {
+      constructor() {
+        // Always call super first in constructor
+        super();
+
+        // Create a shadow root
+        var shadow = this.attachShadow({ mode: 'open' });
+
+        // Create text node and add word count to it
+        var text = document.createElement('span');
+        text.textContent = 'default:';
+
+        // Append it to the shadow root
+        shadow.appendChild(text);
+      }
+    }
+
+    // Define the new element
+    customElements.define('custom-component', WordCount);
+  </script>
+</body>
+
+</html>
