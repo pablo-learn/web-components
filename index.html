@@ -23,31 +23,16 @@
   </template>
 
   <h1>Hello world</h1> -->
+  <template id="button-template">
+    <slot name="content">
+    </slot>
+  </template>
 
-  <custom-component></custom-component>
+  <button-component>
+    <p slot="content">Hello word</p>
+  </button-component>
 
-  <script>
-    // Create a class for the element
-    class WordCount extends HTMLElement {
-      constructor() {
-        // Always call super first in constructor
-        super();
-
-        // Create a shadow root
-        var shadow = this.attachShadow({ mode: 'open' });
-
-        // Create text node and add word count to it
-        var text = document.createElement('span');
-        text.textContent = 'default:';
-
-        // Append it to the shadow root
-        shadow.appendChild(text);
-      }
-    }
-
-    // Define the new element
-    customElements.define('custom-component', WordCount);
-  </script>
 </body>
+<script type="module" src="./Button.js"></script>
 
 </html>
