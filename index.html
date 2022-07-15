@@ -1,52 +1,52 @@
 <!DOCTYPE html>
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
 <html>
 
 <body>
-  <!-- <style>
-    body {
-      font-family: monospace;
-    }
+  <main class="container m-auto">
 
-    h1 {
-      color: pink;
-    }
-  </style>
+    <h1 class="text-2xl">Demo web components</h1>
+    <h3>You need some of this versions: Chrome 53, Opera 40, Safari 10, Firefox 59</h3>
+    <template id="button-template">
+      <style>
+        button {
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          cursor: pointer;
+          background-color: green;
+        }
+      </style>
+      <button>
+        <slot name="icon">
+          ❤️
+        </slot>
+        <slot>slot default</slot>
+      </button>
+    </template>
 
-  <template>
-    <style>
-      h1 {
-        color: red;
-      }
-    </style>
-    <h1>Hello world!</h1>
-  </template>
+    <button-component>
+      <span slot="icon">🤷‍♂️</span>
+      AWESOME
+    </button-component>
+    <button-component>
+      Simple duplicated component
+    </button-component>
+    <button-component>
+      Btn3
+    </button-component>
 
-  <h1>Hello world</h1> -->
-  <template id="button-template">
-    <style>
-      button {
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        cursor: pointer;
-        background-color: green;
-      }
-    </style>
-    <button>
-      <slot name="content">
-      </slot>
-    </button>
-  </template>
-
-  <button-component>
-    <span slot="content">Hello word</span>
-  </button-component>
-
+  </main>
 </body>
 <script type="module" src="./Button.js"></script>
 
