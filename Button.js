@@ -5,10 +5,9 @@ class Button extends HTMLElement {
         const template = document.createElement("template");
         template.innerHTML = `
         <header>
-          <script src="https://cdn.tailwindcss.com"></script>
+          <link rel="stylesheet" href="./output.css" />
         </header>
         <style>
-        @import "https://cdn.tailwindcss.com";
          /*  button {
             border: none;
             color: white;
@@ -21,7 +20,7 @@ class Button extends HTMLElement {
             background-color: green;
           } */
         </style>
-        <button class="${this.getAttribute('class') || ''}">
+        <button class="bg-rose-400 hover:bg-rose-600 text-white font-bold py-2 px-4 rounded ${this.getAttribute('class') || ''}">
           <slot name="icon">
             ❤️
           </slot>

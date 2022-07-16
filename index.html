@@ -3,13 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-
-    button {
-      background-color: red;
-    }
-  </style>
+  <link rel="stylesheet" href="output.css">
 </head>
 
 <html>
@@ -20,17 +14,20 @@
     <h1 class="text-2xl">Demo web components</h1>
     <h3>You need some of this versions: Chrome 53, Opera 40, Safari 10, Firefox 59</h3>
 
-    <button-component class="bg-rose-400">
-      <span slot="icon">🤷‍♂️</span>
-      AWESOME
-    </button-component>
-    <button-component>
-      Simple duplicated component
-    </button-component>
-    <button-component>
-      Btn3
-    </button-component>
+    <div class="grid gap-1">
 
+      <button-component class="">
+        <span slot="icon">🤷‍♂️</span>
+        AWESOME
+      </button-component>
+      <button-component>
+        Simple duplicated component
+      </button-component>
+      <button-component>
+        Btn3
+      </button-component>
+    </div>
+      
   </main>
 </body>
 <script type="module" src="./Button.js"></script>
