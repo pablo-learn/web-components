@@ -1,24 +1,12 @@
 class Button extends HTMLElement {
     constructor() {
         super();
-        
         const template = document.createElement("template");
         template.innerHTML = `
         <header>
           <link rel="stylesheet" href="./output.css" />
         </header>
         <style>
-         /*  button {
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            cursor: pointer;
-            background-color: green;
-          } */
         </style>
         <button class="bg-rose-400 hover:bg-rose-600 text-white font-bold py-2 px-4 rounded ${this.getAttribute('class') || ''}">
           <slot name="icon">
@@ -39,4 +27,4 @@ class Button extends HTMLElement {
       }
 }
 
-customElements.define("button-component", Button);
+customElements.define("primary-button", Button);
