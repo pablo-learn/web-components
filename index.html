@@ -4,6 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+
+    button {
+      background-color: red;
+    }
+  </style>
 </head>
 
 <html>
@@ -13,29 +19,8 @@
 
     <h1 class="text-2xl">Demo web components</h1>
     <h3>You need some of this versions: Chrome 53, Opera 40, Safari 10, Firefox 59</h3>
-    <template id="button-template">
-      <style>
-        button {
-          border: none;
-          color: white;
-          padding: 15px 32px;
-          text-align: center;
-          text-decoration: none;
-          display: inline-block;
-          font-size: 16px;
-          cursor: pointer;
-          background-color: green;
-        }
-      </style>
-      <button>
-        <slot name="icon">
-          ❤️
-        </slot>
-        <slot>slot default</slot>
-      </button>
-    </template>
 
-    <button-component>
+    <button-component class="bg-rose-400">
       <span slot="icon">🤷‍♂️</span>
       AWESOME
     </button-component>
