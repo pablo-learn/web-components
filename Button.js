@@ -1,8 +1,11 @@
 class Button extends HTMLElement {
-    constructor() {
-        super();
-        const template = document.createElement("template");
-        template.innerHTML = `
+  constructor() {
+    super();
+  }
+
+  connectedCallback() {
+    const template = document.createElement("template");
+    template.innerHTML = `
         <header>
           <link rel="stylesheet" href="./output.css" />
         </header>
@@ -16,15 +19,19 @@ class Button extends HTMLElement {
         </button>
         `;
 
-        var shadowRoot = this.attachShadow({ mode: "open" });
-        shadowRoot.appendChild(template.content.cloneNode(true));
+    var shadowRoot = this.attachShadow({ mode: "open" });
+    shadowRoot.appendChild(template.content.cloneNode(true));
 
-        // on click
-        const button = this.shadowRoot.querySelector("button").addEventListener("click", this.handleClick);
-      }
-      handleClick(e) {
-        console.log('This button was clicked');
-      }
+    // on click
+    const button = this.shadowRoot.querySelector("button").addEventListener("click", this.handleClick);
+
+  }
+
+
+
+  handleClick(e) {
+    console.log('This button was clicked');
+  }
 }
 
 customElements.define("primary-button", Button);
