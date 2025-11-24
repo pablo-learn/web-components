@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ckecking basic webcomponent concepts</title>
-    <link rel="icon" type="image/x-icon" href="./favicon.svg">
-    <link rel="stylesheet" href="output.css">
-    <script type="module" src="./Button.js" defer></script>
-  </head>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ckecking basic webcomponent concepts</title>
+  <link rel="icon" type="image/x-icon" href="./favicon.svg">
+  <link rel="stylesheet" href="output.css">
+  <script type="module" src="./Button.js" defer></script>
+</head>
+
 <body>
   <main class="container m-auto">
     <h1 class="text-2xl">Demo web components</h1>
@@ -18,7 +20,9 @@
         AWESOME
       </primary-button>
       <primary-button>
-        Simple duplicated component
+        Simple duplicated component <span slot="icon">
+          🐶
+        </span>
       </primary-button>
       <primary-button>
         Btn3
@@ -26,4 +30,5 @@
     </div>
   </main>
 </body>
+
 </html>

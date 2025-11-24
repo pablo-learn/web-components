@@ -13,7 +13,6 @@ class Button extends HTMLElement {
         </style>
         <button class="bg-rose-400 hover:bg-rose-600 text-white font-bold py-2 px-4 rounded ${this.getAttribute('class') || ''}">
           <slot name="icon">
-            ❤️
           </slot>
           <slot>slot default</slot>
         </button>
