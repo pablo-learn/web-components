@@ -18,7 +18,7 @@ class Button extends HTMLElement {
         </button>
         `;
 
-    var shadowRoot = this.attachShadow({ mode: "open" });
+    const shadowRoot = this.attachShadow({ mode: "open" });
     shadowRoot.appendChild(template.content.cloneNode(true));
 
     // on click
