@@ -4,6 +4,7 @@ class Button extends HTMLElement {
   }
 
   connectedCallback() {
+    console.time('Button connected');
     const template = document.createElement("template");
     template.innerHTML = `
         <header>
@@ -23,7 +24,7 @@ class Button extends HTMLElement {
 
     // on click
     const button = this.shadowRoot.querySelector("button").addEventListener("click", this.handleClick);
-
+    console.timeEnd('Button connected');
   }
 
 
